@@ -1,120 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-    <title>
-        HOME PAGE
-    </title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | sneaker.kicks .</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<BODY>
 
-    <header>
-        <!-- thr header is the top section of the webpage -->
-
-        <div>
-            <!-- div a divider that seperates the logo  -->
-
-            <h1>SNEAKER.KICKS</h1>
-
-            <nav>
-                <!-- nav is for navigation contains navigation links for website -->
-
-                <li>
-                    <!-- refers to unordered list -->
-
-
-                <li>
-                    <!-- refers to list item which is a single item in the list -->
-
-                    <a href="index.html">
-                        HOME</a>
-                    <!-- A refers to anchor to represent links, which can be use to go to external webpages -->
-
-                </li>
-                <li>
-                    <!-- refers to list item which is a single item in the list -->
-
-                    <a href="about_us.html">
-                        About us</a>
-                    <!-- A refers to anchor to represent links, which can be use to go to external webpages -->
-
-                </li>
-                <li>
-                    <!-- refers to list item which is a single item in the list -->
-
-                    <a href="services_page.html">
-                        Services</a>
-                    <!-- A refers to anchor to represent links, which can be use to go to external webpages -->
-
-                </li>
-                <li>
-                    <!-- refers to list item which is a single item in the list -->
-
-                    <a href="Products.html">
-                        Kicks</a>
-                    <!-- A refers to anchor to represent links, which can be use to go to external webpages -->
-
-                </li>
-
-                <!-- refers to list item which is a single item in the list -->
-
-                <a href="enquiry.html">
-                    Enquiries</a>
-                <!-- A refers to anchor to represent links, which can be use to go to external webpages -->
-                </li>
-                <!-- refers to list item which is a single item in the list -->
-                <li><a href="contact.html">
-                        Contact us</a>
-                    <!-- A refers to anchor to represent links, which can be use to go to external webpages -->
-                </li>
-
-
-
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <img class="logo" src="images/backG logo.png">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+            <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+                <i class="fa fa-bars icon-open" aria-hidden="true"></i>
+                <i class="fa fa-times icon-close" aria-hidden="true"></i>
+            </label>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="Products.html">Products</a></li>
+                    <li><a href="enquiry.html" aria-current="page">Enquiries</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
-
             </nav>
-
         </div>
-
     </header>
 
-
-
     <main>
-        <!-- used to place the main content of my webpage -->
-        <section id="hero-section">
-            <!-- a tag used to separate the content in your main page, usually these will have a heading -->
-            <img src="images/MY KICKS.jpg" width="600px" height="600px" alt="kicks">"
-            <h3>Welcome to</h3>
-            <h2>my project where you can learn html</h2>
-
-            <div class="call-to-action-btn">
-                <a href="enquiry.html">enquiries</a>
-                <a href="contact.html">contact</a>
-            </div>
-
-
-        </section id="brief-info">
-        <h2>My project summary </h2>
-        <div class="summary-content">
-            <img src="images/YSNEAKERt.jpg" alt="image showing website logo" />
-            <div class="summary-text">
-                <p>KICKS is a modern sneaker brand established in 2026 with the aim of providing fashionable, comfortable, and affordable sneakers for people of all ages. The brand focuses on combining quality craftsmanship with the latest fashion trends. Since its launch, KICKS has expanded its product range to include casual, sports, and limited-edition sneakers.</p>
+        <div class="container">
+            <header class="page-header">
+                <h1>Enquire / Volunteer</h1>
+            </header>
+            <div class="form-layout">
+                <section class="form-card">
+                    <h2>Enquiry/Voulenteer Form</h2>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="enq-name">Name</label>
+                            <input type="text" id="enq-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="enq-surname">Surname</label>
+                            <input type="text" id="enq-surname" name="surname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="enq-email">Email</label>
+                            <input type="email" id="enq-email" name="email" required placeholder="you@email.com">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="enq-tel">Contact Number</label>
+                                <input type="tel" id="enq-tel" name="tel" placeholder="+27 ...">
+                            </div>
+                            <div class="form-group">
+                                <label for="enq-type">Reason for contact</label>
+                                <select id="enq-type" name="type">
+                                    <option>General enquiry</option>
+                                    <option>Enquiry about a service</option>
+                                    <option>Enquiry about a product</option>
+                                    <option>I want to volunteer</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="enq-message">Message</label>
+                            <textarea id="enq-message" name="message" rows="5" placeholder="Message..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block"><i class="fa
+fa-paper-plane" aria-hidden="true"></i>Send</button>
+                        <p class="form-note">Static prototype — this form is not yet
+                            connected to a real server.</p>
+                    </form>
+                </section>
+                <section class="info-card">
+                    <h2>FAQs</h2>
+                    <div class="faq-item">
+                        <h3><i class="fa fa-question-circle-o" aria-hidden="true"></i> ASK ABOUT YOUR KICKS</h3>
+                        <p>How to choose the perfect size..</p>
+                        <p>What is your style..</p>
+                        <p></p>
+                    </div>
+                    <!-- Repeat this .faq-item pattern for four more questions -->
+                    <h3 class="mt-md">You can also find out more on:</h3>
+                    <ul class="social-list">
+                        <li><a class="icon-btn" href="#" aria-label="Facebook"><i class="fa
+fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a class="icon-btn" href="#" aria-label="Instagram"><i class="fa
+fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a class="icon-btn" href="#" aria-label="LinkedIn"><i class="fa
+fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a class="icon-btn" href="#" aria-label="Twitter"><i class="fa
+fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a class="icon-btn" href="#" aria-label="YouTube"><i class="fa
+fa-youtube" aria-hidden="true"></i></a></li>
+                        <li><a class="icon-btn" href="#" aria-label="WhatsApp"><i class="fa
+fa-whatsapp" aria-hidden="true"></i></a></li>
+                    </ul>
+                </section>
             </div>
         </div>
-        <section>
-
-        </section>
     </main>
-    <!-- end of main -->
-    <footer>
-        <!-- the footer is the bottom of the webpage, information like terms and conditions, policies, contact information and copyright  -->
-        <p>Contact email:ST10522734</p>
-        <p>&copy; 2026 ST10522734</p>
-    </footer>
-</BODY>
+
+    <footer class="site-footer">
+            <div class="container footer-inner">
+                <div class="footer-col">
+                    <p>For more information.</p>
+                    <ul class="icon-list">
+                        <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+27 73 335 3645">+27 73 335 3645
+                        </li>
+                        <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a
+                                href="fenyaneofentse1@email.com">fenynaeofentse1@email.com</a></li>
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i><span>27446
+                                kgosi Street, Protea Glen</span></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us on </h4>
+                    <ul class="social-list">
+                        <li><a class="icon-btn" href="#" aria-label="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a class="icon-btn" href="#" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a class="icon-btn" href="#" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a class="icon-btn" href="#" aria-label="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a class="icon-btn" href="#" aria-label="YouTube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                        <li><a class="icon-btn" href="#" aria-label="WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 All rights reserved. Kgosi Fenyane </p>
+        </footer>
+</body>
 
 </html>
