@@ -1,102 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-  <title>
-    ABOUT US
-  </title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home.| sneaker.kicks</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<BODY>
 
-  <header>
-    <!-- thr header is the top section of the webpage -->
-
-    <div>
-      <!-- div a divider that seperates the logo  -->
-
-      <h1> SNEAKER.KICKS </h1>
-
-      <nav>
-        <!-- nav is for navigation contains navigation links for website -->
-
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo" >
+      <img src="images/backG logo.png">
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+        <i class="fa fa-bars icon-open" aria-hidden="true"></i>
+        <i class="fa fa-times icon-close" aria-hidden="true"></i>
+      </label>
+      <nav class="main-nav" aria-label="Main navigation">
         <ul>
-          <!-- refers to unordered list -->
-
-
-          <li>
-            <!-- refers to list item which is a single item in the list -->
-
-            <a href="index.html">
-              HOME</a>
-            <!-- A refers to anchor to represent links, which can be use to go to external webpages -->
-
-          </li>
-
-          <li>
-            <!-- refers to list item which is a single item in the list -->
-
-            <a href="about_us.html">
-              about us</a>
-            <!-- A refers to anchor to represent links, which can be use to go to external webpages -->
-
-          </li>
-
-          <li>
-            <!-- refers to list item which is a single item in the list -->
-
-            <a href="services_page.html">
-              Services </a>
-            <!-- A refers to anchor to represent links, which can be use to go to external webpages -->
-
-          </li>
-
-          <li>
-            <!-- refers to list item which is a single item in the list -->
-
-            <a href="Products.html">
-              Kicks</a>
-            <!-- A refers to anchor to represent links, which can be use to go to external webpages -->
-
-          </li>
-
-          <!-- refers to list item which is a single item in the list -->
-          <li><a href="enquiry.html">
-              Enquiries</a>
-            <!-- A refers to anchor to represent links, which can be use to go to external webpages -->
-          </li>
-          <li>
-            <!-- refers to list item which is a single item in the list -->
-
-            <a href="contact.html">
-              Contact us</a>
-            <!-- A refers to anchor to represent links, which can be use to go to external webpages -->
-
-          </li>
-
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="about_us.html" aria-current="page">About Us</a></li>
+          <li><a href="Products.html">Products</a></li>
+          <li><a href="enquiry.html">Enquiries</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
-
       </nav>
-
     </div>
-
   </header>
-  <main>
 
-    <section id="about us">
-      <h2>About us</h2>
-      <div class="summary-content">
-        <img src="" alt="image showing website logo" />
-        <div class="About-text">
-          <p>KICKS is a modern sneaker brand established in 2026 with the aim of providing fashionable, comfortable, and affordable sneakers for people of all ages. The brand focuses on combining quality craftsmanship with the latest fashion trends. Since its launch, KICKS has expanded its product range to include casual, sports, and limited-edition sneakers.
-</p>
+  <main>
+    <section class="section">
+      <div class="container split">
+        <div class="split-image is-square">
+          <img src="images/YSNEAKERt.jpg" alt="Portrait or team photo
+— square crop">
+        </div>
+        <div class="split-text">
+          <h1>About Us</h1>
+          <p>KICKS is a modern sneaker brand established in 2026 with the aim of providing fashionable, comfortable, and affordable sneakers for people of all ages. The brand focuses on combining quality craftsmanship with the latest fashion trends. Since its launch, KICKS has expanded its product range to include casual, sports, and limited-edition sneakers.</p>
+          <p></p>
+          <div class="stats">
+            <div class="stat-box">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <div class="stat-number">+27 73 335 3645</div>
+              <div class="stat-label"></div>
+            </div>
+            <div class="stat-box">
+              <i class="fa fa-users" aria-hidden="true"></i>
+              <div class="stat-number">+27 73 517 0056</div>
+              <div class="stat-label"></div>
+            </div>
+            <div class="stat-box">
+              <i class="fa fa-user-plus" aria-hidden="true"></i>
+              
+              <div class="stat-label">you can find us on</div>
+            </div>
+          </div>
+          <h3>Social Media</h3>
+          <ul class="social-list">
+            <li><a class="icon-btn" href="#" aria-label="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a class="icon-btn" href="#" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a class="icon-btn" href="#" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          </ul>
         </div>
       </div>
-
     </section>
   </main>
-</BODY>
+
+ <footer class="site-footer">
+            <div class="container footer-inner">
+                <div class="footer-col">
+                    <p >For more information.</p>
+                    <ul class="icon-list">
+                        <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+27 73 335 3645">+27 73 335 3645
+                        </li>
+                        <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a
+                                href="fenyaneofentse1@email.com">fenynaeofentse1@email.com</a></li>
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i><span>27446
+                                kgosi Street, Protea Glen</span></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us on </h4>
+                    <ul class="social-list">
+                        <li><a class="icon-btn" href="#" aria-label="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a class="icon-btn" href="#" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a class="icon-btn" href="#" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a class="icon-btn" href="#" aria-label="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a class="icon-btn" href="#" aria-label="YouTube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                        <li><a class="icon-btn" href="#" aria-label="WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 All rights reserved. Kgosi Fenyane </p>
+        </footer>
+</body>
 
 </html>
