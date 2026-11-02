@@ -5,10 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | sneaker.kicks</title>
+  <meta name="description" content="A generic, beginner-friendly HTML/CSS website template for WEDE5020, built from the Client wireframe.">
+  <meta few>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
-</head>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
+</head>
 
 <body>
   <header class="site-header">
@@ -21,7 +25,7 @@
       </label>
       <nav class="main-nav" aria-label="Main navigation">
         <ul>
-          <li><a href="index.html" >Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about_us.html">About Us</a></li>
           <li><a href="Products.html">Products</a></li>
           <li><a href="enquiry.html">Enquiries</a></li>
@@ -39,10 +43,10 @@
       <div class="form-layout">
         <section class="form-card">
           <h2>Contact Form</h2>
-          <form action="#" method="post">
+          <form action="mailto:fenyaneofentse1@gmail.com" method="post">
             <div class="form-group">
               <label for="c-name">Name</label>
-              <input type="text" id="c-name" name="name" required>
+              <input type="text" id="c-name" name="name">
             </div>
             <div class="form-group">
               <label for="c-surname">Surname</label>
@@ -60,16 +64,20 @@
               <label for="c-message">Message</label>
               <textarea id="c-message" name="message" rows="5" placeholder="Message..."></textarea>
             </div>
-            <button type="submit" class="btn btn-success btn-block"><i class="fa
-fa-paper-plane" aria-hidden="true"></i>Send</button>
-            <p class="form-note">Static prototype — this form is not yet
-              connected to a real server.</p>
+            <button type="submit" class="btn btn-success btn-block"><i class="fa fa-paper-plane"
+                aria-hidden="true"></i>Send</button>
+            <p class="form-success is-hidden" role="status">Thank you! Your message looks good (this prototype does not
+              send it anywhere yet).</p>
+            <p class="form-note">Static prototype — this form is not yet connected to a real server.</p>
+            <p class="form-note">Static prototype — this form is not yet connected to a real server.</p>
           </form>
         </section>
         <section class="info-card">
-          <h2>Location</h2>
-          <img class="map-image" src="images/location.png" alt="Map
-screenshot or embed">
+          <section class="map-container">
+            <h3>Our Location</h3>
+           <div id="map" style="height: 350px; border: 1px solid #ccc; border-radius: 8px;"></div>
+  <br />
+          </section>
           <h3>You can also reach us on:</h3>
           <ul class="icon-list">
             <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+27 73 335 3645">+27 73 335 3645</a></li>
@@ -86,51 +94,58 @@ screenshot or embed">
             <li><i class="fa fa-clock-o" ariahidden="true"></i><span><strong>Sunday:</strong> Closed</span></li>
           </ul>
           <ul class="social-list">
-            <li><a class="icon-btn" href="#" aria-label="Facebook"><i class="fa
-fa-facebook" aria-hidden="true"></i></a></li>
-            <li><a class="icon-btn" href="#" aria-label="Instagram"><i class="fa
-fa-instagram" aria-hidden="true"></i></a></li>
-            <li><a class="icon-btn" href="#" aria-label="LinkedIn"><i class="fa
-fa-linkedin" aria-hidden="true"></i></a></li>
-            <li><a class="icon-btn" href="#" aria-label="Twitter"><i class="fa
-fa-twitter" aria-hidden="true"></i></a></li>
-            <li><a class="icon-btn" href="#" aria-label="YouTube"><i class="fa
-fa-youtube" aria-hidden="true"></i></a></li>
-            <li><a class="icon-btn" href="#" aria-label="WhatsApp"><i class="fa
-fa-whatsapp" aria-hidden="true"></i></a></li>
+            <li><a class="icon-btn" href="#" aria-label="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </li>
+            <li><a class="icon-btn" href="#" aria-label="Instagram"><i class="fa fa-instagram"
+                  aria-hidden="true"></i></a></li>
+            <li><a class="icon-btn" href="#" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </li>
+            <li><a class="icon-btn" href="#" aria-label="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </li>
+            <li><a class="icon-btn" href="#" aria-label="YouTube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+            </li>
+            <li><a class="icon-btn" href="#" aria-label="WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+            </li>
           </ul>
         </section>
       </div>
     </div>
   </main>
 
- <footer class="site-footer">
-            <div class="container footer-inner">
-                <div class="footer-col">
-                    <p >For more information.</p>
-                    <ul class="icon-list">
-                        <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+27 73 335 3645">+27 73 335 3645
-                        </li>
-                        <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a
-                                href="fenyaneofentse1@email.com">fenynaeofentse1@email.com</a></li>
-                        <li><i class="fa fa-map-marker" aria-hidden="true"></i><span>27446
-                                kgosi Street, Protea Glen</span></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Follow us on </h4>
-                    <ul class="social-list">
-                        <li><a class="icon-btn" href="#" aria-label="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a class="icon-btn" href="#" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a class="icon-btn" href="#" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li><a class="icon-btn" href="#" aria-label="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a class="icon-btn" href="#" aria-label="YouTube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                        <li><a class="icon-btn" href="#" aria-label="WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <p class="copyright">&copy; 2026 All rights reserved. Kgosi Fenyane </p>
-        </footer>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <p>For more information.</p>
+        <ul class="icon-list">
+          <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+27 73 335 3645">+27 73 335 3645
+          </li>
+          <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a
+              href="fenyaneofentse1@email.com">fenynaeofentse1@email.com</a></li>
+          <li><i class="fa fa-map-marker" aria-hidden="true"></i><span>27446
+              kgosi Street, Protea Glen</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow us on </h4>
+        <ul class="social-list">
+          <li><a class="icon-btn" href="#" aria-label="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          </li>
+          <li><a class="icon-btn" href="#" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </li>
+          <li><a class="icon-btn" href="#" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          </li>
+          <li><a class="icon-btn" href="#" aria-label="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          </li>
+          <li><a class="icon-btn" href="#" aria-label="YouTube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+          </li>
+          <li><a class="icon-btn" href="#" aria-label="WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 All rights reserved. Kgosi Fenyane </p>
+  </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
