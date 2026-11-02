@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>enquiry| sneaker.kicks</title>
+    <title>enquiry | sneaker.kicks.</title>
+    <meta name="description" content="Have a question about a product or service? Want to volunteer with us? Fill out our enquiry form and our team will get back to you.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -21,7 +22,7 @@
             </label>
             <nav class="main-nav" aria-label="Main navigation">
                 <ul>
-                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about_us.html">About Us</a></li>
                     <li><a href="Products.html">Products</a></li>
                     <li><a href="enquiry.html" aria-current="page">Enquiries</a></li>
@@ -39,7 +40,7 @@
             <div class="form-layout">
                 <section class="form-card">
                     <h2>Enquiry/Voulenteer Form</h2>
-                    <form action="#" method="post">
+                    <form action="#" method="post" novalidate>
                         <div class="form-group">
                             <label for="enq-name">Name</label>
                             <input type="text" id="enq-name" name="name" required>
@@ -57,6 +58,7 @@
                                 <label for="enq-tel">Contact Number</label>
                                 <input type="tel" id="enq-tel" name="tel" placeholder="+27 ...">
                             </div>
+                            <p id="type-hint" class="type-hint" aria-live="polite"></p>
                             <div class="form-group">
                                 <label for="enq-type">Reason for contact</label>
                                 <select id="enq-type" name="type">
@@ -107,32 +109,39 @@ fa-whatsapp" aria-hidden="true"></i></a></li>
     </main>
 
     <footer class="site-footer">
-            <div class="container footer-inner">
-                <div class="footer-col">
-                    <p>For more information.</p>
-                    <ul class="icon-list">
-                        <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+27 73 335 3645">+27 73 335 3645
-                        </li>
-                        <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a
-                                href="fenyaneofentse1@email.com">fenynaeofentse1@email.com</a></li>
-                        <li><i class="fa fa-map-marker" aria-hidden="true"></i><span>27446
-                                kgosi Street, Protea Glen</span></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Follow us on </h4>
-                    <ul class="social-list">
-                        <li><a class="icon-btn" href="#" aria-label="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a class="icon-btn" href="#" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a class="icon-btn" href="#" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li><a class="icon-btn" href="#" aria-label="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a class="icon-btn" href="#" aria-label="YouTube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                        <li><a class="icon-btn" href="#" aria-label="WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <p>For more information.</p>
+                <ul class="icon-list">
+                    <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+27 73 335 3645">+27 73 335 3645
+                    </li>
+                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a
+                            href="fenyaneofentse1@email.com">fenynaeofentse1@email.com</a></li>
+                    <li><i class="fa fa-map-marker" aria-hidden="true"></i><span>27446
+                            kgosi Street, Protea Glen</span></li>
+                </ul>
             </div>
-            <p class="copyright">&copy; 2026 All rights reserved. Kgosi Fenyane </p>
-        </footer>
+            <div class="footer-col">
+                <h4>Follow us on </h4>
+                <ul class="social-list">
+                    <li><a class="icon-btn" href="#" aria-label="Facebook"><i class="fa fa-facebook"
+                                aria-hidden="true"></i></a></li>
+                    <li><a class="icon-btn" href="#" aria-label="Instagram"><i class="fa fa-instagram"
+                                aria-hidden="true"></i></a></li>
+                    <li><a class="icon-btn" href="#" aria-label="LinkedIn"><i class="fa fa-linkedin"
+                                aria-hidden="true"></i></a></li>
+                    <li><a class="icon-btn" href="#" aria-label="Twitter"><i class="fa fa-twitter"
+                                aria-hidden="true"></i></a></li>
+                    <li><a class="icon-btn" href="#" aria-label="YouTube"><i class="fa fa-youtube"
+                                aria-hidden="true"></i></a></li>
+                    <li><a class="icon-btn" href="#" aria-label="WhatsApp"><i class="fa fa-whatsapp"
+                                aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 All rights reserved. Kgosi Fenyane </p>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
