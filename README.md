@@ -35,7 +35,14 @@ Improve customer engagement and brand awareness.
 1,000 website visitors per month.  
 200 online orders per month.  
 100 newsletter subscriptions each month. 
-#---
+
+## Changelog
+- **Part 3 Updates:**
+    - Added SEO meta descriptions to all pages.
+    - Implemented JavaScript form validation and AJAX submission.
+    - Added a lightbox gallery for products.
+    - Fixed typo in Leaflet script tag.
+    - Deployed site to Netlify
 
 
  
