@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | sneaker.kicks .</title>
+    <title>Home | sneaker.kicks.</title>
+    <meta name="description" content="Discover the latest drops at Sneaker Kicks. Find your perfect fit today.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,7 +14,7 @@
 <body>
     <header class="site-header">
         <div class="container header-inner">
-            <img class="logo" src="images/backG logo.png">
+
             <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
             <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
                 <i class="fa fa-bars icon-open" aria-hidden="true"></i>
@@ -21,10 +22,10 @@
             </label>
             <nav class="main-nav" aria-label="Main navigation">
                 <ul>
-                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
                     <li><a href="about_us.html">About Us</a></li>
                     <li><a href="Products.html">Products</a></li>
-                    <li><a href="enquiry.html" aria-current="page">Enquiries</a></li>
+                    <li><a href="enquiry.html">Enquiries</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
@@ -33,80 +34,45 @@
 
     <main>
         <div class="container">
-            <header class="page-header">
-                <h1>Enquire / Volunteer</h1>
-            </header>
-            <div class="form-layout">
-                <section class="form-card">
-                    <h2>Enquiry/Voulenteer Form</h2>
-                    <form action="#" method="post">
-                        <div class="form-group">
-                            <label for="enq-name">Name</label>
-                            <input type="text" id="enq-name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="enq-surname">Surname</label>
-                            <input type="text" id="enq-surname" name="surname" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="enq-email">Email</label>
-                            <input type="email" id="enq-email" name="email" required placeholder="you@email.com">
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="enq-tel">Contact Number</label>
-                                <input type="tel" id="enq-tel" name="tel" placeholder="+27 ...">
-                            </div>
-                            <div class="form-group">
-                                <label for="enq-type">Reason for contact</label>
-                                <select id="enq-type" name="type">
-                                    <option>General enquiry</option>
-                                    <option>Enquiry about a service</option>
-                                    <option>Enquiry about a product</option>
-                                    <option>I want to volunteer</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="enq-message">Message</label>
-                            <textarea id="enq-message" name="message" rows="5" placeholder="Message..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-success btn-block"><i class="fa
-fa-paper-plane" aria-hidden="true"></i>Send</button>
-                        <p class="form-note">Static prototype — this form is not yet
-                            connected to a real server.</p>
-                    </form>
-                </section>
-                <section class="info-card">
-                    <h2>FAQs</h2>
-                    <div class="faq-item">
-                        <h3><i class="fa fa-question-circle-o" aria-hidden="true"></i> ASK ABOUT YOUR KICKS</h3>
-                        <p>How to choose the perfect size..</p>
-                        <p>What is your style..</p>
-                        <p></p>
-                    </div>
-                    <!-- Repeat this .faq-item pattern for four more questions -->
-                    <h3 class="mt-md">You can also find out more on:</h3>
-                    <ul class="social-list">
-                        <li><a class="icon-btn" href="#" aria-label="Facebook"><i class="fa
-fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a class="icon-btn" href="#" aria-label="Instagram"><i class="fa
-fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a class="icon-btn" href="#" aria-label="LinkedIn"><i class="fa
-fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li><a class="icon-btn" href="#" aria-label="Twitter"><i class="fa
-fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a class="icon-btn" href="#" aria-label="YouTube"><i class="fa
-fa-youtube" aria-hidden="true"></i></a></li>
-                        <li><a class="icon-btn" href="#" aria-label="WhatsApp"><i class="fa
-fa-whatsapp" aria-hidden="true"></i></a></li>
-                    </ul>
-                </section>
-            </div>
-        </div>
-    </main>
+            <section class="hero-banner">
+                <img src="images/logo.jpg" class="hero-photo" alt="Sneaker Kicks store front displaying a collection of sneakers">
 
-    <footer class="site-footer">
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <span class="eyebrow" id="greeting"></span>
+                        <h1>Sneaker.Kicks</h1>
+                        <p>
+
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="enquiries.html" class="btn btn-primary"><i class="fa fapaper-plane"
+                                    aria-hidden="true"></i>Enquire</a>
+                            <a href="contact.html" class="btn btn-secondary-light"><i class="fa fa-envelope-o"
+                                    aria-hidden="true"></i>Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="section">
+            <div class="container split">
+                <div class="split-image">
+                   <img src="images/YSNEAKERt.jpg" alt="Close up of a white and red sneaker">
+                </div>
+                <div class="split-text">
+                    
+                    <h2>The more you know</h2>
+                    <p></p>
+                    <div class="hero-buttons">
+                        <a href="about_us.html" class="btn btn-primary">About Us</a>
+                        <a href="Products.html" class="btn btn-secondary">Our Products</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
             <div class="container footer-inner">
                 <div class="footer-col">
                     <p>For more information.</p>
@@ -133,6 +99,7 @@ fa-whatsapp" aria-hidden="true"></i></a></li>
             </div>
             <p class="copyright">&copy; 2026 All rights reserved. Kgosi Fenyane </p>
         </footer>
+        <script src="js/script.js"></script>
 </body>
 
 </html>
