@@ -17,7 +17,22 @@ function showGreeting() {
 }
 showGreeting();
 
-const map = L.map("map").setView([-26.2041, 28.0473], 13,); L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution: '&copy, OpenStreetMap contributors'}).addtO(map); L.marker([-26.2041, 28.0473]).addTo(map).bindPopup('My Location');
+const mapElement = document.getElementById("map");
+if (mapElement) {
+    // Initialize the map and set the view to Protea Glen, Soweto (approximate coordinates)
+    const map = L.map('map').setView([-26.2744, 27.8292], 14); 
+    
+    // Add the OpenStreetMap tiles
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Add a marker and a popup
+    L.marker([-26.2744, 27.8292]).addTo(map)
+        .bindPopup('<b>Sneaker.Kicks</b><br>27446 Kgosi Street, Protea Glen')
+        .openPopup();
+}
 
 function toggleAnswer(event) {
     var answer = event.currentTarget.nextElementSibling;
@@ -167,24 +182,30 @@ function clearErrors(form) {
 const forms = document.querySelectorAll("form");
 forms.forEach(function (form) {
     const successMessage = form.querySelector(".form-success");
+    
     form.addEventListener("submit", function (event) {
         event.preventDefault(); // stop the page reloading - we check first
         clearErrors(form);
+        
         if (successMessage) {
             successMessage.classList.add("is-hidden");
         }
+        
         let formIsValid = true;
         let firstBadField = null;
         const requiredFields = form.querySelectorAll("[required]");
+        
         requiredFields.forEach(function (field) {
             const value = field.value.trim();
             const labelText = field.labels[0].textContent;
             let problem = "";
+            
             if (value === "") {
                 problem = labelText + " is required.";
             } else if (field.type === "email" && !isValidEmail(value)) {
                 problem = "Please enter a valid email address, like you@email.com.";
             }
+            
             if (problem !== "") {
                 showError(field, problem);
                 formIsValid = false;
@@ -193,15 +214,116 @@ forms.forEach(function (form) {
                 }
             }
         });
+        
         if (formIsValid) {
-            form.reset();
-            showTypeHint(); // reset() empties the menu, so refresh the hint
-            if (successMessage) {
-                successMessage.classList.remove("is-hidden");
-            }
+            // --- NEW AJAX SUBMISSION CODE ---
+            // Disable the submit button to prevent double-clicks
+            const submitBtn = form.querySelector("button[type='submit']");
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = "Sending...";
+            submitBtn.disabled = true;
+
+            // Gather the form data
+            const formData = new FormData(form);
+
+            // Simulate an AJAX request using fetch()
+            fetch('https://jsonplaceholder.typicode.com/posts', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Success! The data was "sent"
+                console.log('AJAX Success:', data);
+                
+                form.reset();
+                if (typeof showTypeHint === "function") {
+                    showTypeHint(); // reset() empties the menu, so refresh the hint
+                }
+                
+                if (successMessage) {
+                    successMessage.classList.remove("is-hidden");
+                }
+            })
+            .catch(error => {
+                // Handle errors (e.g., no internet connection)
+                console.error('AJAX Error:', error);
+                alert("Sorry, there was an error sending your message. Please try again later.");
+            })
+            .finally(() => {
+                // Restore the button state whether it succeeded or failed
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            });
+            // --- END OF NEW AJAX CODE ---
+
         } else {
             firstBadField.focus(); // jump the cursor to the first problem
         }
     });
 });
+    const lightboxHTML = `
+    <div class="lightbox-overlay" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close" aria-label="Close image">&times;</button>
+            <img src="" alt="Enlarged product view" id="lightbox-img">
+        </div>
+    </div>
+`;
+// Append it to the body
+document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+
+// 2. Get the elements
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxClose = document.getElementById('lightbox-close');
+
+// 3. Find all product images on the page
+const productImages = document.querySelectorAll('.product-image img');
+
+// 4. Add click events to open the lightbox
+if (productImages.length > 0 && lightbox) {
+    productImages.forEach(function(image) {
+        image.addEventListener('click', function() {
+            // Set the lightbox image source to the clicked image's source
+            lightboxImg.src = this.src;
+            // Add the active class to show the overlay
+            lightbox.classList.add('active');
+            // Prevent the page from scrolling while the lightbox is open
+            document.body.style.overflow = 'hidden'; 
+        });
+    });
+
+    // 5. Function to close the lightbox
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        // Re-enable scrolling
+        document.body.style.overflow = ''; 
+        // Clear the source after closing (optional, but good for memory)
+        setTimeout(() => { lightboxImg.src = ''; }, 300); 
+    }
+
+    // 6. Event listeners to close the lightbox
+    lightboxClose.addEventListener('click', closeLightbox);
+
+    // Close if clicking on the dark background (outside the image)
+    lightbox.addEventListener('click', function(event) {
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    // Close if pressing the 'Escape' key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+}
+
 
